@@ -5,11 +5,9 @@ import logging
 import smbus
 from MCP342x import MCP342x
 
-import numpy as np
-
 
 __author__ = 'Steve Marple'
-__version__ = '0.3.4'
+__version__ = '0.3.5'
 __license__ = 'MIT'
 
 
@@ -22,7 +20,7 @@ def get_smbus():
             candidates.append(n)
         except:
             pass
-        
+
     if len(candidates) == 1:
         return smbus.SMBus(candidates[0])
     elif len(candidates) == 0:
